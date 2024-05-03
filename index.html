@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua nota</title>
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #c41535;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    display: inline;
+}
+.header-container {
+    display: flex; 
+    align-items: center; 
+}
+
+.header-container img {
+    height: 8rem;
+    margin-bottom: 10px
+
+}
+
+.cabecalho {
+    flex-grow: 1; /* Faça o texto ocupar o espaço restante */
+    text-align: center; /* Centralize o texto */
+    margin-right: 14rem;
+    
+}
+
+.formulario {
+    margin-top: 20rem;
+    border-radius: 1rem;
+    padding: 80px;
+    background-color: #043c74;
+    margin: 0 auto; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario form {
+    margin-top: 200rem;
+    margin: 0 auto; 
+    display: block; 
+}
+
+.formulario form label {
+    display: block; 
+    margin-bottom: 14px; 
+}
+
+.formulario form input {
+    width: 15rem; 
+    padding: 8px; 
+    margin-bottom: 10px; 
+    border-radius: .3rem;
+}
+
+.formulario form button {
+    display: block; 
+    width: 11rem; 
+    padding: 12px; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: 1px solid black;
+    cursor: pointer; 
+    margin: 0 auto; 
+    border-radius: .3rem;
+    margin-top: 30px;
+}
+
+.formulario form button[type="submit"]:hover {
+    background-color: #0056b3; 
+}
+
+</style>
+<body>
+    <header>
+        <div class="header-container">
+             <img src="./content/logoUni.png" />
+            <h3 class="cabecalho">
+                Sua MÉDIA calculada na hora!
+            </h3>
+        </div>
+    </header>
+    <div class="formulario">
+        <form action="calculo.jsp" method="post">
+            <label for="primeiraNota">Digite a primeira nota:</label>
+            <input type="text" name="primeiraNota" id="primeiraNota" placeholder="Nota 1" required>
+            <label for="segundaNota">Digite a segunda nota:</label>
+            <input type="text" name="segundaNota" id="segundaNota" placeholder="Nota 2" required>
+            <button type="submit">Calcular</button>
+        </form>
+    </div>
+    
+</body>
+</html>
